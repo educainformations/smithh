@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SESSION KING DANIEL CRICKET  | Daniel Smith - Official Telegram</title>
+  
+  <style>
+    :root {
+      --bg-dark: #050811;
+      --bg-card: rgba(14, 22, 41, 0.88);
+      --border-card: rgba(0, 255, 128, 0.22);
+      --accent-green: #00ff73;
+      --green-glow: rgba(0, 255, 115, 0.45);
+      --accent-gold: #ffde59;
+      --text-white: #ffffff;
+      --text-muted: #9bb0c9;
+      --red-alert: #ff334b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 5%, rgba(0, 180, 255, 0.18), transparent 45%),
+        radial-gradient(circle at 50% 25%, rgba(0, 255, 115, 0.12), transparent 40%),
+        linear-gradient(180deg, #070d1c 0%, #03060d 100%);
+      color: var(--text-white);
+      line-height: 1.4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 95px;
+      overflow-x: hidden;
+    }
+
+    /* Ambient stadium floodlight backdrop */
+    .stadium-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 540px;
+      height: 380px;
+      background: radial-gradient(ellipse at top, rgba(50, 160, 255, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Top channel id badge */
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(18, 28, 52, 0.95);
+      border: 1px solid rgba(255, 222, 89, 0.45);
+      color: #ffd643;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      margin-bottom: 16px;
+    }
+
+    /* Circular Logo with Double Neon Halo */
+    .logo-container {
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .logo-glow-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00ff73, #00c3ff, #ffde59);
+      filter: blur(8px);
+      opacity: 0.85;
+      animation: rotateGlow 5s linear infinite;
+    }
+
+    .channel-logo {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3.5px solid #00ff73;
+      box-shadow: 0 8px 24px rgba(0, 255, 115, 0.4);
+      background-color: #121929;
+      display: block;
+    }
+
+    @keyframes rotateGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Headlines */
+    .headline-wrap {
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .headline-danger {
+      font-size: 23px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin-bottom: 6px;
+    }
+
+    .headline-king {
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: -0.2px;
+      text-shadow: 0 0 16px rgba(255, 222, 89, 0.5);
+    }
+
+    .sub-headline {
+      font-size: 13.5px;
+      color: #b5c7db;
+      font-weight: 500;
+      margin-top: 8px;
+      line-height: 1.35;
+    }
+
+    /* Big CTA Button */
+    .btn-tg-main {
+      width: 100%;
+      background: linear-gradient(180deg, #15ff7b 0%, #00cc55 100%);
+      color: #011408;
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-transform: uppercase;
+      box-shadow: 0 6px 28px var(--green-glow), inset 0 2px 2px rgba(255, 255, 255, 0.5);
+      border: 1px solid #70ffaa;
+      animation: pulseAttention 2s infinite ease-in-out;
+      margin-top: 6px;
+      margin-bottom: 14px;
+      cursor: pointer;
+    }
+
+    @keyframes pulseAttention {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 26px var(--green-glow);
+      }
+      50% {
+        transform: scale(1.025);
+        box-shadow: 0 8px 36px rgba(0, 255, 115, 0.7);
+      }
+    }
+
+    .btn-tg-main:active {
+      transform: scale(0.98);
+    }
+
+    /* Highlights strip */
+    .highlights-strip {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background: rgba(14, 23, 43, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #dbe7f5;
+      margin-bottom: 18px;
+    }
+
+    .highlights-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Live Countdown Box */
+    .timer-card {
+      width: 100%;
+      background: linear-gradient(145deg, rgba(23, 17, 36, 0.9), rgba(12, 19, 36, 0.95));
+      border: 1.5px solid rgba(255, 51, 75, 0.4);
+      border-radius: 14px;
+      padding: 13px 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(255, 51, 75, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timer-title {
+      font-size: 12px;
+      color: #ff6879;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .blink-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--red-alert);
+      border-radius: 50%;
+      display: inline-block;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+
+    .timer-units {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .time-box {
+      background: #080d1a;
+      border: 1px solid #283758;
+      border-radius: 8px;
+      padding: 6px 10px;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .time-num {
+      font-size: 20px;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: monospace;
+      line-height: 1;
+    }
+
+    .time-lbl {
+      font-size: 9px;
+      color: #8da4c0;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Trust / Proof Stats */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .proof-chip {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 6px;
+      text-align: center;
+    }
+
+    .proof-chip-val {
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .proof-chip-lbl {
+      font-size: 10px;
+      font-weight: 600;
+      color: #9cb0c8;
+      margin-top: 2px;
+    }
+
+    /* Benefit Cards */
+    .benefit-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .benefit-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 255, 115, 0.16);
+      border-left: 4px solid var(--accent-green);
+      border-radius: 12px;
+      padding: 14px 15px;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .benefit-icon {
+      font-size: 24px;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .benefit-info h3 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 3px;
+    }
+
+    .benefit-info p {
+      font-size: 12px;
+      color: #9ab1cb;
+      line-height: 1.35;
+    }
+
+    /* Telegram Channel Preview Box */
+    .tg-channel-preview {
+      width: 100%;
+      background: #0f182c;
+      border: 1px solid #1c2c50;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .preview-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .preview-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--accent-green);
+    }
+
+    .preview-name {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .preview-handle {
+      font-size: 11.5px;
+      color: #55b8ff;
+      font-weight: 600;
+    }
+
+    .preview-btn {
+      background: #2aabee;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      font-size: 10px;
+      color: #5f748f;
+      line-height: 1.35;
+      padding: 0 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Fixed Sticky Bottom CTA */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(5, 9, 18, 0.95);
+      border-top: 1px solid rgba(0, 255, 115, 0.3);
+      padding: 10px 14px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .sticky-btn {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(90deg, #00eb68, #00c754);
+      color: #031508;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px var(--green-glow);
+    }
+
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      background: #004b1e;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      animation: blink 0.9s infinite alternate;
+    }
+  </style>
+</head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2621367248334427');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2621367248334427&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<body>
+
+  <!-- Ambient Stadium Lighting -->
+  <div class="stadium-glow"></div>
+
+  <main class="container">
+    
+    <!-- Top Channel Verification ID -->
+    <div class="top-badge">
+      <span>👑 PRIVATE TELEGRAM CHANNEL</span>
+    </div>
+
+    <!-- Official Channel Logo with Neon Halos -->
+    <div class="logo-container">
+      <div class="logo-glow-ring"></div>
+      <img 
+        src="https://i.ibb.co/wNFkTF2Y/IMG-20261010-205709-149.jpg" 
+        alt="Session King Cricket Logo" 
+        class="channel-logo"
+        onerror="this.src='https://placehold.co/110x110/121826/00ff73?text=SESSION+KING'"
+      >
+    </div>
+
+    <!-- High-Converting Hook Headlines -->
+    <header class="headline-wrap">
+      <h1 class="headline-danger">CRICKET SE LOSS BAND KARO!</h1>
+      <h2 class="headline-king">DANIEL SMITH KO JOIN KARO 😈</h2>
+      <p class="sub-headline">Daily Match Winner, Toss, Session & 100% Free Accurate Analysis</p>
+    </header>
+
+    <!-- Primary Pulsing High-Conversion Button -->
+    <a href="https://telegram.me/+5BcWQAtwImg3OGI1" target="_blank" rel="noopener noreferrer" class="btn-tg-main">
+      <span>👉 JOIN FREE TELEGRAM CHANNEL</span>
+    </a>
+
+    <!-- Quick Highlights -->
+    <div class="highlights-strip">
+      <span>⚡ 95%+ Accuracy</span>
+      <span>📊 In-Play Entry</span>
+      <span>🚫 No Fees</span>
+    </div>
+
+    <!-- Live Urgent Countdown Alert -->
+    <section class="timer-card">
+      <div class="timer-title">
+        <span class="blink-dot"></span>
+        <span>NEXT MATCH SESSION DROPPING IN</span>
+      </div>
+      <div class="timer-units">
+        <div class="time-box">
+          <div class="time-num" id="min">14</div>
+          <div class="time-lbl">Mins</div>
+        </div>
+        <span style="font-weight:900; font-size:18px; color: #ff6879;">:</span>
+        <div class="time-box">
+          <div class="time-num" id="sec">52</div>
+          <div class="time-lbl">Secs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Badges -->
+    <section class="proof-grid">
+      <div class="proof-chip">
+        <div class="proof-chip-val">🔥150K+</div>
+        <div class="proof-chip-lbl">Active Users</div>
+      </div>
+      <div class="proof-chip">
+        <div class="proof-chip-val">🏆 #11</div>
+        <div class="proof-chip-lbl">Guru Award</div>
+      </div>
+      <div class="proof-chip">
+        <div class="proof-chip-val">✅ 100%</div>
+        <div class="proof-chip-lbl">Verified Free</div>
+      </div>
+    </section>
+
+    <!-- Value Benefits -->
+    <section class="benefit-cards">
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-info">
+          <h3>Full Loss Recovery Plan</h3>
+          <p>Proper safe-entry system & bookset tips so you stay profitable every single tournament.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-info">
+          <h3>Over-by-Over Live Session</h3>
+          <p>Precise 6-over, 10-over, and Lambi calls directly from pitch report & ground ground-analysts.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-info">
+          <h3>Zero Paid Charges - 100% Open</h3>
+          <p>Join now without paying any membership fee. All reports posted publicly on Telegram.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Channel Quick View Card -->
+    <div class="tg-channel-preview">
+      <div class="preview-left">
+        <img src="https://i.ibb.co/wNFkTF2Y/IMG-20261010-205709-149.jpg" alt="Icon" class="preview-avatar">
+        <div>
+          <div class="preview-name">SESSION KING DANIEL CRICKET</div>
+          <div class="preview-handle">@DanielSmithReal</div>
+        </div>
+      </div>
+      <a href="https://telegram.me/+5BcWQAtwImg3OGI1" target="_blank" rel="noopener noreferrer" class="preview-btn">VIEW</a>
+    </div>
+
+    <!-- Secondary CTA -->
+    <a href="https://telegram.me/+5BcWQAtwImg3OGI1" target="_blank" rel="noopener noreferrer" class="btn-tg-main" style="margin-top: 4px;">
+      <span>👉 JOIN TELEGRAM VIP NOW</span>
+    </a>
+
+    <!-- Educational / Informational Note -->
+    <p class="disclaimer">
+      Disclaimer: Cricket tips & match sessions provided for research and entertainment purposes. Strictly for 18+ audiences. Play responsibly.
+    </p>
+
+  </main>
+
+  <!-- Fixed Floating Bottom CTA Bar -->
+  <aside class="sticky-bar">
+    <a href="https://telegram.me/+5BcWQAtwImg3OGI1" target="_blank" rel="noopener noreferrer" class="sticky-btn">
+      <span class="live-dot"></span>
+      <span>JOIN NOW FOR TODAY'S SESSION (FREE)</span>
+    </a>
+  </aside>
+
+  <!-- Dynamic Urgency Timer Script -->
+  <script>
+    // 15-minute looping countdown timer to preserve perpetual urgency
+    let totalSeconds = 14 * 60 + 52;
+    const minEl = document.getElementById('min');
+    const secEl = document.getElementById('sec');
+
+    function updateTimer() {
+      if (totalSeconds <= 0) {
+        totalSeconds = 15 * 60; // reset
+      }
+      totalSeconds--;
+
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+
+      minEl.textContent = String(minutes).padStart(2, '0');
+      secEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
+```
